@@ -1,5 +1,12 @@
-<template lang=""><div> Contact Us </div></template>
-<script>
-export default {};
-</script>
-<style lang=""></style>
+<template>
+  <div class="pages-banner-container">
+    <div class="pages-banner-holder">
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+</template>
+<style scoped>
+.pages-banner-container {
+  background-image: url(../assets/images/hero-page.png);
+}
+</style>
