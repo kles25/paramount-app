@@ -8,8 +8,10 @@
           Paramount Logistics is your premier logistics provider for all your transport
         </p>
         <div class="hero-button-holder">
-          <button>About Us</button>
-          <button>Request Qoutation</button>
+          <router-link to="/about-us"><button>About Us</button></router-link>
+          <router-link to="/services/get-qoutation"
+            ><button>Request Qoutation</button></router-link
+          >
         </div>
       </div>
     </div>
@@ -193,6 +195,6 @@
     </div>
   </div>
 </template>
-<script>
-export default {};
+<script setup>
+import { RouterLink } from "vue-router";
 </script>
