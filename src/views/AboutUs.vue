@@ -184,7 +184,7 @@
   </div>
 </template>
 <script>
-import PageBanner from "@/components/PageBanner.vue";
+import PageBanner from "../components/PageBanner.vue";
 
 export default {
   components: {
