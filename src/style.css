@@ -714,6 +714,10 @@ body {
   text-align: justify;
 }
 
+.services-section-holder p span {
+  font-weight: 600;
+}
+
 .services-form-holder h1 {
   color: #212121;
   font-size: 7vh;
@@ -753,7 +757,7 @@ body {
 
 .forms-title {
   height: 4vh;
-  width: 40vw;
+  width: 60vw;
   background-color: #212121;
   display: flex;
   align-items: center;
@@ -808,23 +812,52 @@ input[type=radio]:focus {
   outline-color: transparent;
 }
 
+.form-input-holder {
+  margin-bottom: 5vh;
+}
+
 .form-input-holder input {
   width: 100%;
-  height: 4vh;
+  height: 5vh;
   border: none;
   border-bottom: .1vh solid #04A533;
   margin-bottom: 3vh;
-  padding: 1vw 1vw;
+  padding: 1vh 1vw;
   font-size: 1.8vh;
   color: #212121;
+  background-color: #d1f0da;
+}
+
+.form-input-holder-two {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+
+.form-input-holder-two input {
+  width: 45%;
+  height: 5vh;
+  border: none;
+  border-bottom: .1vh solid #04A533;
+  margin-bottom: 3vh;
+  padding: 1vh 1vw;
+  font-size: 1.8vh;
+  color: #212121;
+  background-color: #d1f0da;
+}
+
+.form-input-holder-two input::placeholder {
+  color: #212121;
+  text-transform: uppercase;
 }
 
 .form-input-holder input::placeholder {
   color: #212121;
+  text-transform: uppercase;
 }
 
 .form-input-holder input:focus {
-  background-color: #BFE8CB;
+  background-color: #d1f0da;
 }
 
 input[type=date] {
@@ -837,17 +870,22 @@ input[type=date] {
   border: none;
   border-bottom: .1vh solid #04A533;
   margin-bottom: 3vh;
-  padding: 1vw 1vw;
+  padding: 1vh 1vw;
   font-size: 1.8vh;
   color: #212121;
-  background-color: #BFE8CB;
+  background-color: #d1f0da;
+}
+
+.form-input-holder textarea::placeholder {
+  color: #212121;
+  text-transform: uppercase;
 }
 
 .form-radio-holder-two {
   display: flex;
   align-items: left;
   flex-flow: column;
-
+  margin-bottom: 5vh;
 }
 
 .form-radio-holder-two label {
@@ -896,13 +934,14 @@ input[type=date] {
 }
 
 .form-button-holder button:hover {
-  border: .1vh solid #fffffe;
-  color: #fffffe;
+  border: .1vh solid #04A533;
+  color: #04A533;
   background-color: #212121;
 }
 
 .form-select-holder {
   text-align: left;
+  margin-bottom: 5vh;
 }
 
 .form-select-holder select {
@@ -910,9 +949,24 @@ input[type=date] {
   border: none;
   border-bottom: .1vh solid #04A533;
   margin-bottom: 3vh;
-  padding: 1vw 1vw;
+  padding: 1vh 1vw;
   font-size: 1.8vh;
   color: #212121;
+  height: 5vh;
+  background-color: #d1f0da;
+}
+
+.form-input-holder-two select {
+  width: 45%;
+  border: none;
+  border-bottom: .1vh solid #04A533;
+  margin-bottom: 3vh;
+  padding: 1vh 1vw;
+  font-size: 1.8vh;
+  color: #212121;
+  height: 5vh;
+  text-transform: uppercase;
+  background-color: #d1f0da;
 }
 
 .form-select-holder label {
@@ -927,11 +981,11 @@ input[type=date] {
 
 .form-book-holder input {
   width: 100%;
-  height: 4vh;
+  height: 5vh;
   border: none;
   border-bottom: .1vh solid #212121;
   margin-bottom: 3vh;
-  padding: 1vw 1vw;
+  padding: 1vh 1vw;
   font-size: 1.8vh;
   color: #212121;
 }
@@ -954,7 +1008,7 @@ input[type=date] {
 }
 
 .book-button-holder button:hover {
-  border: .1vh solid #fffffe;
-  color: #fffffe;
+  border: .1vh solid #04A533;
+  color: #04A533;
   background-color: #212121;
 }

@@ -11,14 +11,15 @@ const routes = [
             { path: 'cost-by-air', name: 'cost-by-air', component: () => import('./views/CostByAir.vue') },
             { path: 'cost-by-sea', name: 'cost-by-sea', component: () => import('./views/CostBySea.vue') },
             { path: 'duties-taxes', name: 'duties-taxes', component: () => import('./views/DutiesTaxes.vue') },
-            { path: 'get-qoutation', name: 'get-qoutation', component: () => import('./views/GetQoutation.vue') },
+            { path: 'get-quotation', name: 'get-quotation', component: () => import('./views/GetQuotation.vue') },
             { path: 'asked-questions', name: 'asked-questions', component: () => import('./views/AskedQuestions.vue') },
-            { path: 'terms-conditions', name: 'terms-conditions', component: () => import('./views/TermsConditions.vue') },
+            { path: 'standard-rates', name: 'standard-rates', component: () => import('./views/StandardRates.vue') },
         ]
     },
     { path: '/career', name: 'career', component: () => import('./views/Career.vue') },
     { path: '/payment', name: 'payment', component: () => import('./views/Payment.vue') },
-    { path: '/contact-us', name: 'contact-us', component: () => import('./views/ContactUs.vue') }
+    { path: '/contact-us', name: 'contact-us', component: () => import('./views/ContactUs.vue') },
+    { path: '/terms-conditions', name: 'terms-conditions', component: () => import('./views/TermsConditions.vue') },
 ]
 
 const router = createRouter({

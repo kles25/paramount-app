@@ -70,7 +70,7 @@
         <label
           ><input type="radio" name="termsconditions" />I have read, understood and agree
           to Paramount &nbsp
-          <router-link to="/services/terms-conditions" target="_blank"
+          <router-link to="/terms-conditions" target="_blank"
             >Terms and Conditions</router-link
           ></label
         >

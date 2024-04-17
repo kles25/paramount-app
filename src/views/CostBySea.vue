@@ -38,7 +38,7 @@
         <input type="number" placeholder="Estimated Price" />
       </div>
       <div class="form-button-holder">
-        <button type="submit">GET QOUTE</button>
+        <button type="submit">GET QUOTE</button>
       </div>
     </form>
   </div>

@@ -1,4 +1,4 @@
-<template lang=""><div> Get Qoutation </div></template>
+<template lang=""><div> Standard Rates </div></template>
 <script>
 export default {};
 </script>

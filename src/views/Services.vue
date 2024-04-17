@@ -26,16 +26,16 @@ const routes = [
   { name: "cost-by-air", label: "Cost Calculator by Air", to: { name: "cost-by-air" } },
   { name: "cost-by-sea", label: "Cost Calculator by Sea", to: { name: "cost-by-sea" } },
   { name: "duties-taxes", label: "Duties And Taxes", to: { name: "duties-taxes" } },
-  { name: "get-qoutation", label: "Get a Qoutation", to: { name: "get-qoutation" } },
+  { name: "get-quotation", label: "Get a Quotation", to: { name: "get-quotation" } },
   {
     name: "asked-questions",
     label: "Frequently Asked Question",
     to: { name: "asked-questions" },
   },
   {
-    name: "terms-conditions",
-    label: "Terms And Condition",
-    to: { name: "terms-conditions" },
+    name: "standard-rates",
+    label: "Standard Rates",
+    to: { name: "standard-rates" },
   },
 ];
 </script>
