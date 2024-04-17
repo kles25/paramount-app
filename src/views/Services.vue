@@ -1,8 +1,9 @@
 <template>
-  <PageBanner
-    title="Services"
-    imageUrl="/src/assets/images/banners/services2-banner.png"
-  />
+  <div class="pages-banner-container">
+    <div class="pages-banner-holder">
+      <h1>Services</h1>
+    </div>
+  </div>
   <div class="services-navigation-container">
     <div class="services-navigation-holder">
       <router-link
@@ -16,15 +17,6 @@
   </div>
   <router-view />
 </template>
-
-<script>
-import PageBanner from "../components/PageBanner.vue";
-export default {
-  components: {
-    PageBanner,
-  },
-};
-</script>
 
 <script setup>
 import { RouterView, RouterLink } from "vue-router";
@@ -48,6 +40,9 @@ const routes = [
 ];
 </script>
 <style scoped>
+.pages-banner-container {
+  background-image: url(../assets/images/banners/services2-banner.png);
+}
 .services-navigation-container {
   height: 10vh;
   background-color: #212121;

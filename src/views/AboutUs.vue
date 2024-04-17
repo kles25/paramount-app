@@ -1,8 +1,9 @@
 <template>
-  <PageBanner
-    title="About Us"
-    imageUrl="/src/assets/images/banners/about-us-banner.png"
-  />
+  <div class="pages-banner-container">
+    <div class="pages-banner-holder">
+      <h1>About Us</h1>
+    </div>
+  </div>
   <div class="au-section-container">
     <div class="au-section-holder">
       <h1>Who We Are</h1>
@@ -118,10 +119,7 @@
       </p>
     </div>
   </div>
-  <div
-    class="section-w-background-container"
-    style="background-image: url(/src/assets/images/mvv-bg.png)"
-  >
+  <div class="section-w-background-container">
     <div class="section-w-background-holder">
       <div class="pages-row">
         <div class="pages-col-4">
@@ -183,13 +181,13 @@
     </div>
   </div>
 </template>
-<script>
-import PageBanner from "../components/PageBanner.vue";
 
-export default {
-  components: {
-    PageBanner,
-  },
-};
-</script>
-<style lang=""></style>
+<style scoped>
+.pages-banner-container {
+  background-image: url(../assets/images/banners/about-us-banner.png);
+}
+
+.section-w-background-container {
+  background-image: url(../assets/images/mvv-bg.png);
+}
+</style>
