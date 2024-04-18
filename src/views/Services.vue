@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="pages-banner-container">
     <div class="pages-banner-holder">
       <h1>Services</h1>
@@ -16,6 +17,7 @@
     </div>
   </div>
   <router-view />
+  <Footer />
 </template>
 
 <script setup>
@@ -39,12 +41,24 @@ const routes = [
   },
 ];
 </script>
+<script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
+
 <style scoped>
 .pages-banner-container {
   background-image: url(../assets/images/banners/services2-banner.png);
 }
 .services-navigation-container {
-  height: 10vh;
+  height: 25vh;
   background-color: #212121;
 }
 .services-navigation-holder {
@@ -58,16 +72,18 @@ const routes = [
 
 .services-navigation-holder a {
   text-decoration: none;
-  font-size: 1.8vh;
+  font-size: 1.6vh;
   color: #04a533;
-  font-weight: 300;
+  font-weight: 600;
   text-transform: uppercase;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  transform: rotate(-45deg);
 }
 
 .services-navigation-holder a.router-link-active {
   color: #fffffe;
-  border-bottom: 0.1vh solid #fffffe;
-  line-height: 5vh;
+  border-bottom: 0.3vh solid #fffffe;
   text-shadow: -1px 0px 6px rgba(255, 255, 255, 0.81);
 }
 </style>

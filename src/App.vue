@@ -1,10 +1,10 @@
 <template>
   <div class="header-container">
-    <button class="go-top-button" ref="goTopButton" @click="goToTop">Back to top</button>
+    <button class="go-top-button" ref="goTopButton" @click="goToTop">
+      <span class="material-symbols-outlined"> arrow_upward </span>
+    </button>
   </div>
-  <Header />
   <router-view />
-  <Footer />
 </template>
 
 <script setup>
@@ -36,17 +36,7 @@ onMounted(() => {
 });
 </script>
 
-<script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-};
-</script>
+<script></script>
 
 <style>
 /* Additional styles for the "go-top-button" */
@@ -54,15 +44,15 @@ export default {
   display: none; /* Hide the button by default */
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   background-color: #04a533;
   color: white;
   border: none;
-  padding: 1vh 1.5vw;
+  padding: 1vh 1vw;
   cursor: pointer;
   z-index: 999;
   text-transform: uppercase;
-  font-size: 1.6vh;
+  font-size: 1.5vh;
 }
 
 .go-top-button:hover {

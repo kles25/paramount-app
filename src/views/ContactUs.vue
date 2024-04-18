@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="pages-banner-container">
     <div class="pages-banner-holder">
       <h1>Contact Us</h1>
@@ -49,8 +50,19 @@
       ></iframe>
     </div>
   </div>
+  <Footer />
 </template>
+<script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
 <style scoped>
 .pages-banner-container {
   background-image: url(../assets/images/banners/contact-us-banner.jpg);

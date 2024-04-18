@@ -20,6 +20,8 @@ const routes = [
     { path: '/payment', name: 'payment', component: () => import('./views/Payment.vue') },
     { path: '/contact-us', name: 'contact-us', component: () => import('./views/ContactUs.vue') },
     { path: '/terms-conditions', name: 'terms-conditions', component: () => import('./views/TermsConditions.vue') },
+    { path: '/sign-up', name: 'sign-up', component: () => import('./views/SignUp.vue') },
+    { path: '/sign-in', name: 'sign-in', component: () => import('./views/SignIn.vue') },
 ]
 
 const router = createRouter({

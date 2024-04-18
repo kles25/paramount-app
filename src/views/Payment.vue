@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="pages-banner-container">
     <div class="pages-banner-holder">
       <h1>Payment</h1>
@@ -51,8 +52,19 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
-<script setup>
+<script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+
 import { RouterLink } from "vue-router";
 </script>
 

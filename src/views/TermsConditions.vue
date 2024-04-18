@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="pages-banner-container">
     <div class="pages-banner-holder">
       <h1>Terms And Conditions</h1>
@@ -235,13 +236,19 @@
     </div>
   </div>
   <BookService />
+  <Footer />
 </template>
 <script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+
 import BookService from "../components/BookService.vue";
 
 export default {
   components: {
     BookService,
+    Header,
+    Footer,
   },
 };
 </script>

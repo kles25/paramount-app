@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="hero-container">
     <div class="hero-holder">
       <div class="hero-content">
@@ -28,7 +29,7 @@
       <div class="pages-row">
         <div class="pages-col-4">
           <div class="services-content-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/air-sea.png" alt="" />
             <h4>Air & Sea Freight</h4>
             <p>
               Paramount Logistics offers fast, reliable and low cost air & sea freight
@@ -39,7 +40,7 @@
         </div>
         <div class="pages-col-4">
           <div class="services-content-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/custom-clearance.png" alt="" />
             <h4>Customs Clearance</h4>
             <p>
               Whether you choose to use our in- house or outsourced clearing services, we
@@ -50,7 +51,7 @@
         </div>
         <div class="pages-col-4">
           <div class="services-content-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/forwarding.png" alt="" />
             <h4>Freight Forwarding</h4>
             <p>
               As a company specialized in freight forwarding, we always make sure that the
@@ -61,7 +62,7 @@
         </div>
         <div class="pages-col-4">
           <div class="services-content-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/trucking.png" alt="" />
             <h4>Trucking</h4>
             <p>
               Operating a wide range of different sized fleet of trucks, low bed trailers,
@@ -72,7 +73,7 @@
         </div>
         <div class="pages-col-4">
           <div class="services-content-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/warehouse.png" alt="" />
             <h4>Warehousing</h4>
             <p>
               Whatever your market sector, in today’s highly competitive environment,
@@ -83,7 +84,7 @@
         </div>
         <div class="pages-col-4">
           <div class="services-content-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/consolidation.png" alt="" />
             <h4>Consolidation</h4>
             <p>
               We have numerous partners abroad and offices in China to do consolidation
@@ -108,7 +109,7 @@
         to our warehouse. Charge will be on a per cbm basis. In case of pick up service
         from your source, additional charges will apply.
       </p>
-      <button>Free Estimate</button>
+      <router-link to="/services/cost-by-air"><button>Free Estimate</button></router-link>
     </div>
   </div>
   <div class="section-one-container">
@@ -150,14 +151,14 @@
       <div class="pages-row">
         <div class="pages-col-6">
           <div class="contact-section-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/globe.png" alt="" />
             <p>
               For your corporate or personal requirements, whether by sea, air, or land,
               we will provide the most amazing shipping rates and services to you.
             </p>
           </div>
           <div class="contact-section-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/call.png" alt="" />
             <h3>24/7 SHIPPING SERVICE.</h3>
             <p>+63 906-584-3215 (GLOBE)</p>
             <p>+63 968-597-3038 (SMART)</p>
@@ -181,20 +182,37 @@
   <div class="section-one-container">
     <div class="section-partners-holder">
       <h1>SOME OF OUR <span>CLIENTS</span></h1>
-      <div class="partners-logo-holder">
-        <img src="../assets/images/partners/1.png" alt="Lazada" />
-        <img
-          style="margin-top: 15vh"
-          src="../assets/images/partners/2.png"
-          alt="iBayad"
-        />
-        <img src="../assets/images/partners/3.png" alt="Forex" />
-        <img style="margin-top: 15vh" src="../assets/images/partners/4.png" alt="GDL" />
-        <img src="../assets/images/partners/5.png" alt="McRitz" />
+      <div class="pages-row">
+        <div class="pages-col-4">
+          <img src="../assets/images/partners/1.png" alt="Lazada" />
+        </div>
+        <div class="pages-col-4">
+          <img src="../assets/images/partners/2.png" alt="iBayad" />
+        </div>
+        <div class="pages-col-4">
+          <img src="../assets/images/partners/3.png" alt="Forex" />
+        </div>
+        <div class="pages-col-6">
+          <img src="../assets/images/partners/4.png" alt="GDL" />
+        </div>
+        <div class="pages-col-6">
+          <img src="../assets/images/partners/5.png" alt="McRitz" />
+        </div>
       </div>
     </div>
   </div>
+  <Footer />
 </template>
-<script setup>
+<script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+
 import { RouterLink } from "vue-router";
 </script>

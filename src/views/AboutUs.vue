@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="pages-banner-container">
     <div class="pages-banner-holder">
       <h1>About Us</h1>
@@ -8,10 +9,16 @@
     <div class="au-section-holder">
       <h1>Who We Are</h1>
       <div class="title-underline"></div>
-      <div class="au-awards-holder">
-        <img src="../assets/images/awards/awards1.png" alt="Award One" />
-        <img src="../assets/images/awards/awards2.png" alt="Award Two" />
-        <img src="../assets/images/awards/awards3.png" alt="Award Three" />
+      <div class="pages-row">
+        <div class="pages-col-4">
+          <img src="../assets/images/awards/awards1.png" alt="Award One" />
+        </div>
+        <div class="pages-col-4">
+          <img src="../assets/images/awards/awards2.png" alt="Award Two" />
+        </div>
+        <div class="pages-col-4">
+          <img src="../assets/images/awards/awards3.png" alt="Award Three" />
+        </div>
       </div>
       <p>
         <span>Paramount Logistics Inc.</span> provides supply chain and transportation
@@ -124,7 +131,7 @@
       <div class="pages-row">
         <div class="pages-col-4">
           <div class="mvv-section-holder" style="border-right: 0.2vh solid #04a533">
-            <img src="../assets/images/paramount-logo.png" alt="Mission" />
+            <img src="../assets/images/icons/flag.png" alt="Mission" />
             <h3>Mission</h3>
             <p>
               Our mission statement is simplicity itself. To constantly exceed customer
@@ -136,7 +143,7 @@
         </div>
         <div class="pages-col-4">
           <div class="mvv-section-holder" style="border-right: 0.2vh solid #04a533">
-            <img src="../assets/images/paramount-logo.png" alt="Mission" />
+            <img src="../assets/images/icons/people.png" alt="Mission" />
             <h3>Vision</h3>
             <p>
               To be the leader, the strongest and most trusted company both nationally and
@@ -146,7 +153,7 @@
         </div>
         <div class="pages-col-4">
           <div class="mvv-section-holder">
-            <img src="../assets/images/paramount-logo.png" alt="Mission" />
+            <img src="../assets/images/icons/hands.png" alt="Mission" />
             <h3>Values</h3>
             <p>Connected</p>
             <p>Committed</p>
@@ -165,24 +172,37 @@
         problem resolution that provides overall peace of mind.
       </p>
       <div class="wcu-content-holder">
-        <div class="wcu-content">
-          <img src="../assets/images/paramount-logo.png" alt="Profesional" />
-          <p>PROFESSIONAL QUALITY GUARANTEE</p>
-        </div>
-        <div class="wcu-content">
-          <img src="../assets/images/paramount-logo.png" alt="Affordable" />
-          <p>EASY AND AFFORDABLE PAYMENTS</p>
-        </div>
-        <div class="wcu-content">
-          <img src="../assets/images/paramount-logo.png" alt="Guarantee" />
-          <p>BEST PRODUCT GUARANTEE</p>
+        <div class="pages-row">
+          <div class="pages-col-4">
+            <img src="../assets/images/icons/award.png" alt="Profesional" />
+            <p>PROFESSIONAL QUALITY GUARANTEE</p>
+          </div>
+          <div class="pages-col-4">
+            <img src="../assets/images/icons/taskl.png" alt="Affordable" />
+            <p>EASY AND AFFORDABLE PAYMENTS</p>
+          </div>
+          <div class="pages-col-4">
+            <img src="../assets/images/icons/star.png" alt="Profesional" />
+            <p>BEST PRODUCT GUARANTEE</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <Footer />
 </template>
+<script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
-<style scoped>
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
+<style>
 .pages-banner-container {
   background-image: url(../assets/images/banners/about-us-banner.png);
 }
