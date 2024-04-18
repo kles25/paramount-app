@@ -7,7 +7,7 @@
   </div>
   <div class="services-section-container">
     <div class="services-section-holder">
-      <div class="pages-row">
+      <div class="pages-row pymnt">
         <div class="pages-col-7">
           <form action="" class="payment-section-holder">
             <div class="form-input-holder">
@@ -125,5 +125,30 @@ import { RouterLink } from "vue-router";
   background-color: #04a533;
   color: #d1f0da;
   border: 0.1vh solid #d1f0da;
+}
+
+@media (max-width: 992px) {
+  .services-section-holder .pages-col-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .services-section-holder .pages-col-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .services-section-holder .pages-row.pymnt {
+    flex-direction: column-reverse;
+  }
+
+  .payment-notice-holder {
+    margin-left: 0;
+    margin-bottom: 5vh;
+  }
 }
 </style>

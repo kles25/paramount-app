@@ -33,7 +33,7 @@
       <h1>STANDARD RATES FOR LOCAL PARCEL DELIVERY</h1>
       <div class="title-underline"></div>
     </div>
-    <div class="services-section-holder">
+    <div class="services-section-holder" style="display: none">
       <div class="pages-row">
         <div
           class="pages-col-2"
@@ -50,6 +50,14 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="services-section-holder">
+      <img
+        class="img-rates-data"
+        src="../assets/images/srf-local.png"
+        style="width: 50vw; height: auto"
+        alt=""
+      />
     </div>
   </div>
   <BookService />

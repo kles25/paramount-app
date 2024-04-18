@@ -8,7 +8,7 @@
       </div>
       <div class="header-nav-holder">
         <router-link
-          v-for="route in routes"
+          v-for="route in mroutes"
           :key="route.name"
           :to="route.to"
           :class="{ active: $route.name === route.name }"
@@ -24,14 +24,27 @@
         <div class="hb-icon-three"></div>
       </div>
       <div class="menu-holder" :class="{ active: click }">
-        <router-link
-          v-for="route in routes"
-          :key="route.name"
-          :to="route.to"
-          :class="{ active: $route.name === route.name }"
-          >{{ route.label }}</router-link
-        >
-        <router-link to="/sign-up">Register</router-link>
+        <div class="main-routes">
+          <h5>MAIN</h5>
+          <router-link
+            v-for="route in mroutes"
+            :key="route.name"
+            :to="route.to"
+            :class="{ active: $route.name === route.name }"
+            >{{ route.label }}</router-link
+          >
+          <router-link to="/sign-up">Register</router-link>
+        </div>
+        <div class="services-routes">
+          <h5>SERVICES</h5>
+          <router-link
+            v-for="route in sroutes"
+            :key="route.name"
+            :to="route.to"
+            :class="{ active: $route.name === route.name }"
+            >{{ route.label }}</router-link
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -41,13 +54,31 @@
 import { RouterLink } from "vue-router";
 import { ref } from "vue";
 
-const routes = [
+const mroutes = [
   { name: "home", label: "Home", to: { name: "home" } },
   { name: "about-us", label: "About Us", to: { name: "about-us" } },
   { name: "services", label: "Services", to: { name: "book-now" } },
   { name: "career", label: "Career", to: { name: "career" } },
   { name: "payment", label: "Payment", to: { name: "payment" } },
   { name: "contact-us", label: "Contact Us", to: { name: "contact-us" } },
+];
+
+const sroutes = [
+  { name: "book-now", label: "Book Now", to: { name: "book-now" } },
+  { name: "cost-by-air", label: "Cost Calculator by Air", to: { name: "cost-by-air" } },
+  { name: "cost-by-sea", label: "Cost Calculator by Sea", to: { name: "cost-by-sea" } },
+  { name: "duties-taxes", label: "Duties And Taxes", to: { name: "duties-taxes" } },
+  { name: "get-quotation", label: "Get a Quotation", to: { name: "get-quotation" } },
+  {
+    name: "asked-questions",
+    label: "Frequently Asked Question",
+    to: { name: "asked-questions" },
+  },
+  {
+    name: "standard-rates",
+    label: "Standard Rates",
+    to: { name: "standard-rates" },
+  },
 ];
 
 const click = ref(false);
@@ -58,22 +89,47 @@ const handleClick = () => {
 </script>
 
 <style>
+.main-routes h5 {
+  font-size: 2vh;
+  color: #fffffe;
+  margin-bottom: 3vh;
+  letter-spacing: 0.3vh;
+  display: none;
+}
+
+.menu-holder.active .main-routes h5 {
+  display: block;
+}
+
+.services-routes h5 {
+  font-size: 2vh;
+  color: #fffffe;
+  margin-bottom: 3vh;
+  letter-spacing: 0.3vh;
+  margin-top: 2vh;
+  display: none;
+}
+
+.menu-holder.active .services-routes h5 {
+  display: block;
+}
+
 .menu-holder {
-  position: absolute;
+  position: fixed;
   height: 100vh;
   top: 0;
   right: 0;
   width: 0;
   display: none;
-  align-items: end;
+  align-items: start;
   justify-content: center;
-  background-color: rgba(33, 33, 33, 0.8);
+  background-color: rgba(33, 33, 33, 0.9);
   transition: 0.5s;
   flex-direction: column;
 }
 
 .menu-holder.active {
-  width: 200px;
+  width: 350px;
   padding: 0 2vw;
 }
 
@@ -84,7 +140,7 @@ const handleClick = () => {
 .menu-holder a {
   text-decoration: none;
   color: #04a533;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   cursor: pointer;
   transition: 0.5s;
   text-transform: uppercase;
@@ -110,10 +166,12 @@ const handleClick = () => {
 .hb-icon-holder {
   z-index: 10;
   cursor: pointer;
-  margin-left: 2vh;
+  margin-right: 2vh;
   padding: 1vh;
   text-align: right;
   display: none;
+  position: fixed;
+  right: 0;
 }
 
 .hb-icon-holder.active .hb-icon-one {
@@ -153,6 +211,12 @@ const handleClick = () => {
 
   .menu-holder {
     display: flex;
+  }
+}
+
+@media (max-width: 690px) {
+  .menu-holder.active {
+    width: 200px;
   }
 }
 </style>

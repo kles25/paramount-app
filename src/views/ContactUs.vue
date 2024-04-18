@@ -11,14 +11,14 @@
       <div class="pages-row">
         <div class="pages-col-6">
           <div class="contact-section-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/globe.png" alt="" />
             <p>
               For your corporate or personal requirements, whether by sea, air, or land,
               we will provide the most amazing shipping rates and services to you.
             </p>
           </div>
           <div class="contact-section-holder">
-            <img src="../assets/images/paramount-logo.png" alt="" />
+            <img src="../assets/images/icons/call.png" alt="" />
             <h3>24/7 SHIPPING SERVICE.</h3>
             <p>+63 906-584-3215 (GLOBE)</p>
             <p>+63 968-597-3038 (SMART)</p>

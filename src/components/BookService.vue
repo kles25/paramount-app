@@ -32,4 +32,24 @@
   </div>
 </template>
 <script></script>
-<style lang=""></style>
+<style>
+@media (max-width: 992px) {
+  .book-service-holder .pages-col-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .book-service-holder h1 {
+    font-size: 5vh;
+  }
+
+  .book-button-holder button {
+    width: 100%;
+    height: 5vh;
+    padding: 1vh 1.5vw;
+    margin-top: 3vh;
+  }
+}
+</style>

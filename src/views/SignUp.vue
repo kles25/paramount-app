@@ -26,9 +26,9 @@
 <script setup>
 import { RouterLink } from "vue-router";
 </script>
-<style scoped>
+<style>
 .auth-section-container {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fffffe;
   padding: 10vh 5vw;
 }
@@ -114,5 +114,32 @@ import { RouterLink } from "vue-router";
 .form-links p a {
   font-size: 1.8vh;
   color: #fffffe;
+}
+
+@media (max-width: 790px) {
+  .auth-section-holder .pages-row {
+    flex-direction: column-reverse;
+  }
+
+  .auth-section-holder .pages-col-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .auth-section-holder img {
+    height: 20vh;
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 0;
+  }
+
+  .auth-form-holder {
+    height: 60vh;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    position: relative;
+  }
 }
 </style>

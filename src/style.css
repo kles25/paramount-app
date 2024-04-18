@@ -1124,6 +1124,29 @@ input[type=date] {
     max-width: 100%;
   }
 
+  .img-rates-data {
+    width: 70vw !important;
+  }
+
+  .services-form-holder h1 {
+    font-size: 5vh;
+  }
+
+  .services-section-holder h1 {
+    font-size: 5vh;
+  }
+
+  .form-button-holder button {
+    height: 5vh;
+    width: 100%;
+    padding: 1vh 1.5vw;
+    margin-top: 3vh;
+  }
+
+  .services-navigation-container {
+    display: none !important;
+  }
+
 }
 
 @media (max-width: 690px) {
@@ -1138,4 +1161,9 @@ input[type=date] {
   .au-section-holder h1 {
     font-size: 5vh;
   }
+
+  .img-rates-data {
+    width: 90vw !important;
+  }
+
 }

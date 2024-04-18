@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="services-section-holder">
+    <div class="services-section-holder" style="display: none">
       <div class="pages-row">
         <div class="pages-col-4" v-for="(column, columnIndex) in data" :key="columnIndex">
           <div
@@ -27,6 +27,14 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="services-section-holder">
+      <img
+        class="img-rates-data"
+        src="../assets/images/faq-image.png"
+        style="height: auto; width: 50vw"
+        alt=""
+      />
     </div>
   </div>
 </template>
