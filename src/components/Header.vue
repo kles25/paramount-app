@@ -24,7 +24,7 @@
         <div class="hb-icon-three"></div>
       </div>
       <div class="menu-holder" :class="{ active: click }">
-        <div class="main-routes">
+        <div class="main-routes" style="margin-top: 10vh">
           <h5>MAIN</h5>
           <router-link
             v-for="route in mroutes"
@@ -36,9 +36,25 @@
           <router-link to="/sign-up">Register</router-link>
         </div>
         <div class="services-routes">
-          <h5>SERVICES</h5>
+          <h5>MAIN SERVICES</h5>
           <router-link
-            v-for="route in sroutes"
+            v-for="route in msroutes"
+            :key="route.name"
+            :to="route.to"
+            :class="{ active: $route.name === route.name }"
+            >{{ route.label }}</router-link
+          >
+          <h5>USEFUL SERVICES</h5>
+          <router-link
+            v-for="route in usroutes"
+            :key="route.name"
+            :to="route.to"
+            :class="{ active: $route.name === route.name }"
+            >{{ route.label }}</router-link
+          >
+          <h5>USEFUL SERVICES</h5>
+          <router-link
+            v-for="route in psroutes"
             :key="route.name"
             :to="route.to"
             :class="{ active: $route.name === route.name }"
@@ -57,27 +73,108 @@ import { ref } from "vue";
 const mroutes = [
   { name: "home", label: "Home", to: { name: "home" } },
   { name: "about-us", label: "About Us", to: { name: "about-us" } },
-  { name: "services", label: "Services", to: { name: "book-now" } },
+  { name: "services", label: "Services", to: { name: "main-services" } },
   { name: "career", label: "Career", to: { name: "career" } },
   { name: "payment", label: "Payment", to: { name: "payment" } },
   { name: "contact-us", label: "Contact Us", to: { name: "contact-us" } },
 ];
 
-const sroutes = [
-  { name: "book-now", label: "Book Now", to: { name: "book-now" } },
-  { name: "cost-by-air", label: "Cost Calculator by Air", to: { name: "cost-by-air" } },
-  { name: "cost-by-sea", label: "Cost Calculator by Sea", to: { name: "cost-by-sea" } },
-  { name: "duties-taxes", label: "Duties And Taxes", to: { name: "duties-taxes" } },
-  { name: "get-quotation", label: "Get a Quotation", to: { name: "get-quotation" } },
+const msroutes = [
   {
-    name: "asked-questions",
-    label: "Frequently Asked Question",
-    to: { name: "asked-questions" },
+    name: "custom-clearance",
+    label: "Custom Clearance",
+    to: { name: "custom-clearance" },
+  },
+  {
+    name: "consolidation",
+    label: "Consolidation",
+    to: { name: "consolidation" },
+  },
+  {
+    name: "shipping-services",
+    label: "Shipping Services",
+    to: { name: "shipping-services" },
+  },
+  {
+    name: "trucking",
+    label: "Trucking",
+    to: { name: "trucking" },
+  },
+  {
+    name: "warehousing",
+    label: "Warehousing",
+    to: { name: "warehousing" },
+  },
+  {
+    name: "freight-forwarding",
+    label: "Freight Forwarding",
+    to: { name: "freight-forwarding" },
+  },
+  {
+    name: "ship-agency",
+    label: "Ship And Port Agency",
+    to: { name: "ship-agency" },
+  },
+  {
+    name: "allied-services",
+    label: "Allied Services",
+    to: { name: "allied-services" },
+  },
+];
+
+const usroutes = [
+  {
+    name: "book-now",
+    label: "Book Now",
+    to: { name: "book-now" },
+  },
+  {
+    name: "process-flow",
+    label: "Process Flow",
+    to: { name: "process-flow" },
+  },
+  {
+    name: "track-shipment",
+    label: "Track Shipment",
+    to: { name: "track-shipment" },
+  },
+  {
+    name: "gallery",
+    label: "Gallery",
+    to: { name: "gallery" },
+  },
+  {
+    name: "faqs",
+    label: "FAQS",
+    to: { name: "faqs" },
+  },
+];
+
+const psroutes = [
+  {
+    name: "cost-by-sea",
+    label: "Cost Calculator By Sea",
+    to: { name: "cost-by-sea" },
+  },
+  {
+    name: "cost-by-air",
+    label: "Cost Calculator By Air",
+    to: { name: "cost-by-air" },
+  },
+  {
+    name: "get-quotation",
+    label: "Get Quotation",
+    to: { name: "get-quotation" },
   },
   {
     name: "standard-rates",
     label: "Standard Rates",
     to: { name: "standard-rates" },
+  },
+  {
+    name: "duties-taxes",
+    label: "Duties And Taxes",
+    to: { name: "duties-taxes" },
   },
 ];
 
@@ -121,11 +218,10 @@ const handleClick = () => {
   right: 0;
   width: 0;
   display: none;
-  align-items: start;
-  justify-content: center;
-  background-color: rgba(33, 33, 33, 0.9);
+  background-color: rgb(33, 33, 33);
   transition: 0.5s;
-  flex-direction: column;
+  z-index: 10;
+  overflow-y: scroll;
 }
 
 .menu-holder.active {
@@ -151,6 +247,7 @@ const handleClick = () => {
 
 .menu-holder a:hover {
   color: #fffffe;
+  text-shadow: -1px 0px 6px rgba(255, 255, 254, 0.8);
 }
 
 .hb-icon-one,
@@ -164,7 +261,7 @@ const handleClick = () => {
 }
 
 .hb-icon-holder {
-  z-index: 10;
+  z-index: 20;
   cursor: pointer;
   margin-right: 2vh;
   padding: 1vh;
@@ -190,6 +287,7 @@ const handleClick = () => {
 
 .menu-holder a.router-link-active {
   color: #fffffe;
+  text-shadow: -1px 0px 6px rgba(255, 255, 254, 0.8);
 }
 
 @media (max-width: 992px) {
@@ -210,13 +308,20 @@ const handleClick = () => {
   }
 
   .menu-holder {
-    display: flex;
+    display: block;
   }
 }
 
 @media (max-width: 690px) {
   .menu-holder.active {
     width: 200px;
+  }
+
+  .menu-holder {
+    right: 3.5vw;
+  }
+  .hb-icon-holder {
+    right: 3.5vw;
   }
 }
 </style>

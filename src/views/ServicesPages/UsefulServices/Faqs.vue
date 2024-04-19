@@ -31,7 +31,7 @@
     <div class="services-section-holder">
       <img
         class="img-rates-data"
-        src="../assets/images/faq-image.png"
+        src="@/assets/images/faq-image.png"
         style="height: auto; width: 50vw"
         alt=""
       />

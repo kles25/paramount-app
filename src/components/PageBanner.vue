@@ -4,7 +4,7 @@
     :style="{ backgroundImage: 'url(' + imageUrl + ')' }"
   >
     <div class="pages-banner-holder">
-      <h1>{{ title }}</h1>
+      <h1 data-aos="zoom-in" data-aos-duration="1500">{{ title }}</h1>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
+<style>
 .pages-banner-container {
   height: 50vh;
   background-size: cover;
@@ -24,18 +24,12 @@ const props = defineProps({
 }
 
 .pages-banner-holder {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.pages-banner-holder h1 {
-  font-size: 12vh;
-  color: #fffffe;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.64);
+  padding: 0 10vh;
+  text-align: center;
 }
 </style>

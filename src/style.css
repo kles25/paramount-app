@@ -4,6 +4,28 @@
 }
 
 
+/* width */
+::-webkit-scrollbar {
+  padding: .1vh;
+  width: .9vh;
+  height: .9vh;
+  transition: 1s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 .5vh rgba(128, 128, 128, 0);
+  border-radius: 1vh;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #04A533;
+  border-radius: 1vh;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -120,7 +142,7 @@ body {
 }
 
 .pages-banner-holder h1 {
-  font-size: 12vh;
+  font-size: 10vh;
   color: #fffffe;
   text-transform: uppercase;
   font-weight: 600;
@@ -200,7 +222,7 @@ body {
 }
 
 .hero-content {
-  background-color: rgba(33, 33, 33, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 50vw;
   min-height: 60vh;
   box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.93);
@@ -254,22 +276,135 @@ body {
 
 }
 
-/* HOMEPAGE SECTION CSS */
+/* PAGE SECTION CSS */
 
 .section-one-container {
-  min-height: 100vh;
   background-color: #fffffe;
-  padding: 8vh 5vw;
+  padding: 10vh 5vw;
+}
+
+.section-one-holder {
+  text-align: center;
+}
+
+.section-one-holder h1 {
+  font-size: 7vh;
+  margin-bottom: 3vh;
+  color: #212121;
+  text-transform: uppercase;
+}
+
+.section-one-holder p {
+  font-size: 1.8vh;
+  color: #212121;
+  text-align: justify;
+  margin-bottom: 3vh;
+}
+
+.section-one-holder p.sub-title {
+  text-align: center;
+}
+
+.section-one-holder span {
+  color: #04A533;
+}
+
+.section-one-holder a {
+  text-decoration: none;
+}
+
+.section-one-holder button {
+  padding: 2vh 2.5vw;
+  border: .1vh solid #212121;
+  font-size: 1.8vh;
+  color: #212121;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.section-one-holder button:hover {
+  background-color: #212121;
+  color: #04A533;
+  border: .1vh solid #04A533;
+}
+
+.section-one-holder ul {
+  text-align: left;
+  margin-left: 2vw;
+}
+
+.section-one-holder ul li {
+  line-height: 5vh;
+  font-size: 2vh;
+  color: #212121;
 }
 
 .section-two-container {
-  min-height: 100vh;
   background-color: #212121;
-  padding: 15vh 5vw;
+  padding: 10vh 5vw;
+}
+
+.section-two-holder {
+  text-align: center;
+}
+
+.section-two-holder h1 {
+  font-size: 7vh;
+  margin-bottom: 3vh;
+  color: #fffffe;
+  text-transform: uppercase;
+}
+
+.section-two-holder p {
+  font-size: 1.8vh;
+  color: #fffffe;
+  text-align: justify;
+  margin-bottom: 3vh;
+  font-weight: 300;
+}
+
+.section-two-holder p.sub-title {
+  text-align: center;
+}
+
+.section-two-holder span {
+  color: #04A533;
+}
+
+.section-two-holder a {
+  text-decoration: none;
+}
+
+.section-two-holder ul {
+  text-align: left;
+  margin-left: 2vw;
+}
+
+.section-two-holder ul li {
+  line-height: 5vh;
+  font-size: 2vh;
+  color: #fffffe;
 }
 
 .section-services-holder {
   text-align: center;
+}
+
+.section-two-container h1 {
+  color: #fffffe;
+}
+
+.section-two-container h4 {
+  color: #04A533;
+  font-size: 2.5vh;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+
+.section-services-holder a {
+  text-decoration: none;
 }
 
 .section-services-holder h1 {
@@ -287,12 +422,14 @@ body {
   font-size: 2.5vh;
   color: #212121;
   margin-bottom: 2vh;
+  transition: .5s;
 }
 
 .section-services-holder p {
   color: #212121;
   font-size: 2vh;
   margin-bottom: 5vh;
+  transition: .5s;
 }
 
 .services-content-holder {
@@ -301,7 +438,15 @@ body {
   -webkit-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.48);
   margin: 2vh;
-  padding: 1vh 1vw;
+  padding: 2vh 2.5vw;
+  padding-bottom: 0;
+  transition-property: all !important;
+  cursor: pointer;
+}
+
+.services-content-holder:hover {
+  margin: 0;
+  min-height: 37vh;
 }
 
 .services-content-holder img {
@@ -389,7 +534,6 @@ body {
 }
 
 .shop-portal-container {
-  min-height: 100vh;
   background-image: url(../src/assets/images/shop-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -462,12 +606,14 @@ body {
 .section-process-holder ul {
   text-align: left;
   padding-left: 2vw;
+  margin-left: 2vw;
 }
 
 .section-process-holder ul li {
   line-height: 5vh;
   font-size: 1.8vh;
   color: #212121;
+
 }
 
 .section-partners-holder {
@@ -476,7 +622,6 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  min-height: 80vh;
 }
 
 .section-partners-holder h1 {
@@ -546,7 +691,6 @@ body {
 }
 
 .au-section-container {
-  min-height: 100vh;
   background-color: #fffffe;
   padding: 10vh 5vw;
 }
@@ -619,6 +763,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .section-w-background-holder {
@@ -1009,6 +1154,11 @@ input[type=date] {
   background-color: #212121;
 }
 
+.col-6-img {
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 992px) {
   .hero-content {
     width: 100%;
@@ -1147,12 +1297,56 @@ input[type=date] {
     display: none !important;
   }
 
+  .section-two-holder h1 {
+    font-size: 5vh;
+  }
+
+  .section-one-holder h1 {
+    font-size: 5vh;
+  }
+
+  .section-one-holder .pages-col-1,
+  .section-one-holder .pages-col-2,
+  .section-one-holder .pages-col-3,
+  .section-one-holder .pages-col-4,
+  .section-one-holder .pages-col-5,
+  .section-one-holder .pages-col-6,
+  .section-one-holder .pages-col-7,
+  .section-one-holder .pages-col-8,
+  .section-one-holder .pages-col-9,
+  .section-one-holder .pages-col-10,
+  .section-one-holder .pages-col-11,
+  .section-two-holder .pages-col-1,
+  .section-two-holder .pages-col-2,
+  .section-two-holder .pages-col-3,
+  .section-two-holder .pages-col-4,
+  .section-two-holder .pages-col-5,
+  .section-two-holder .pages-col-6,
+  .section-two-holder .pages-col-7,
+  .section-two-holder .pages-col-8,
+  .section-two-holder .pages-col-9,
+  .section-two-holder .pages-col-10,
+  .section-two-holder .pages-col-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pages-banner-container h1 {
+    font-size: 8vh !important;
+  }
+
+
+
 }
 
 @media (max-width: 690px) {
+
   .pages-banner-container h1 {
-    font-size: 8vh;
+    font-size: 6vh !important;
   }
+
 
   .pages-banner-container {
     height: 30vh;

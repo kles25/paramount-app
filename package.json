@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "aos": "^2.3.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },

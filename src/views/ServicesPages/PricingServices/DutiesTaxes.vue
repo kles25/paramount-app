@@ -42,7 +42,7 @@
   <BookService />
 </template>
 <script>
-import BookService from "../components/BookService.vue";
+import BookService from "@/components/BookService.vue";
 
 export default {
   components: {

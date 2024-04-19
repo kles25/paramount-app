@@ -1,11 +1,16 @@
 <template>
   <div class="services-section-container">
     <div class="book-service-holder">
-      <h1>BOOK SERVICE NOW</h1>
-      <div class="title-underline"></div>
+      <h1 data-aos="fade-down" data-aos-duration="1500">BOOK SERVICE NOW</h1>
+      <div class="title-underline" data-aos="zoom-out" data-aos-duration="1000"></div>
       <div class="pages-row">
         <div class="pages-col-6">
-          <form action="" class="form-book-holder">
+          <form
+            action=""
+            class="form-book-holder"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <input type="text" placeholder="NAME" />
             <input type="email" placeholder="EMAIL" />
             <input type="number" placeholder="PHONE" />
@@ -13,14 +18,14 @@
           </form>
         </div>
         <div class="pages-col-6">
-          <div class="contact-book-holder">
+          <div class="contact-book-holder" data-aos="fade-up" data-aos-duration="1500">
             <img src="../assets/images/paramount-logo.png" alt="" />
             <p>
               For your corporate or personal requirements, whether by sea, air, or land,
               we will provide the most amazing shipping rates and services to you.
             </p>
           </div>
-          <div class="contact-book-holder">
+          <div class="contact-book-holder" data-aos="fade-up" data-aos-duration="1500">
             <img src="../assets/images/paramount-logo.png" alt="" />
             <h3>24/7 SHIPPING SERVICE.</h3>
             <p>+63 906-584-3215 (GLOBE)</p>
