@@ -243,8 +243,8 @@ export default {
 </script>
 <style>
 .about-awards-img {
-  width: 80%;
-  height: 45vh;
+  width: 80% !important;
+  height: 45vh !important;
   object-fit: cover;
   margin-bottom: 5vh;
 }
