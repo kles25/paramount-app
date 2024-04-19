@@ -1,16 +1,16 @@
 <template>
   <Header />
-  <div class="pages-banner-container">
-    <div class="pages-banner-holder">
-      <h1>Contact Us</h1>
-    </div>
-  </div>
+  <PageBanner title="CONTACT US" :imageUrl="ContactBanner" />
 
   <div class="section-two-container">
     <div class="section-holder">
       <div class="pages-row">
         <div class="pages-col-6">
-          <div class="contact-section-holder">
+          <div
+            class="contact-section-holder"
+            data-aos="fade-down"
+            data-aos-duration="1500"
+          >
             <img src="@/assets/images/icons/globe.png" alt="" />
             <p>
               For your corporate or personal requirements, whether by sea, air, or land,
@@ -25,7 +25,12 @@
           </div>
         </div>
         <div class="pages-col-6">
-          <form action="" class="contact-form-holder">
+          <form
+            action=""
+            class="contact-form-holder"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <input type="text" placeholder="NAME" required />
             <input type="email" placeholder="E-MAIL" required />
             <input type="number" placeholder="PHONE" required />
@@ -55,11 +60,19 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import PageBanner from "@/components/PageBanner.vue";
+import ContactBanner from "@/assets/images/banners/contact-us-banner.jpg";
 
 export default {
   components: {
     Header,
     Footer,
+    PageBanner,
+  },
+  data() {
+    return {
+      ContactBanner,
+    };
   },
 };
 </script>

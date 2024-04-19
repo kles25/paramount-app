@@ -1,15 +1,17 @@
 <template>
   <Header />
-  <div class="pages-banner-container">
-    <div class="pages-banner-holder">
-      <h1>Payment</h1>
-    </div>
-  </div>
+  <PageBanner title="PAYMENT" :imageUrl="PaymnentBanner" />
+
   <div class="services-section-container">
     <div class="services-section-holder">
       <div class="pages-row pymnt">
         <div class="pages-col-7">
-          <form action="" class="payment-section-holder">
+          <form
+            data-aos="zoom-out"
+            data-aos-duration="1500"
+            action=""
+            class="payment-section-holder"
+          >
             <div class="form-input-holder">
               <input type="text" placeholder="Item Name" />
             </div>
@@ -37,7 +39,7 @@
           </form>
         </div>
         <div class="pages-col-5">
-          <div class="payment-notice-holder">
+          <div class="payment-notice-holder" data-aos="fade-up" data-aos-duration="1500">
             <h3>BEFORE MAKING PAYMENT</h3>
             <p>
               By making payments on our website, we assume you’ve read and understood and
@@ -57,11 +59,19 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import PageBanner from "@/components/PageBanner.vue";
+import PaymnentBanner from "@/assets/images/banners/payment-banner.jpg";
 
 export default {
   components: {
     Header,
     Footer,
+    PageBanner,
+  },
+  data() {
+    return {
+      PaymnentBanner,
+    };
   },
 };
 
@@ -69,10 +79,6 @@ import { RouterLink } from "vue-router";
 </script>
 
 <style scoped>
-.pages-banner-container {
-  background-image: url(@/assets/images/banners/payment-banner.jpg);
-}
-
 .payment-notice-holder {
   margin-left: 2vw;
   background-color: #d1f0da;

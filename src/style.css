@@ -324,6 +324,12 @@ body {
   cursor: pointer;
 }
 
+.section-one-holder img {
+  height: 40vh;
+  width: auto;
+  object-fit: cover;
+}
+
 .section-one-holder button:hover {
   background-color: #212121;
   color: #04A533;
@@ -363,6 +369,12 @@ body {
   text-align: justify;
   margin-bottom: 3vh;
   font-weight: 300;
+}
+
+.section-two-holder img {
+  height: 40vh;
+  width: auto;
+  object-fit: cover;
 }
 
 .section-two-holder p.sub-title {
