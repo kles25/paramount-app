@@ -6,7 +6,7 @@
 import { RouterView } from "vue-router";
 </script>
 <script>
-import MainServicesNavigation from "../../../components/MainServicesNavigation.vue";
+import MainServicesNavigation from "@/components/MainServicesNavigation.vue";
 export default {
   components: {
     MainServicesNavigation,

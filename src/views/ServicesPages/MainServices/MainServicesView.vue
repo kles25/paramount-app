@@ -43,7 +43,7 @@
             data-aos="fade-up"
             data-aos-duration="1500"
             class="col-6-img"
-            src="../../../assets/images/service-process.png"
+            src="@/assets/images/service-process.png"
             alt=""
           />
         </div>

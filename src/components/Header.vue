@@ -3,7 +3,7 @@
     <div class="header-holder">
       <div class="header-logo-holder">
         <router-link to="/"
-          ><img src="../assets/images/paramount-logo.png" alt="Paramount Logo"
+          ><img src="@/assets/images/paramount-logo.png" alt="Paramount Logo"
         /></router-link>
       </div>
       <div class="header-nav-holder">

@@ -6,7 +6,7 @@
           <div class="pages-row">
             <div class="pages-col-4">
               <router-link to="/"
-                ><img src="../assets/images/paramount-logo.png" alt=""
+                ><img src="@/assets/images/paramount-logo.png" alt=""
               /></router-link>
             </div>
             <div class="pages-col-8">

@@ -11,7 +11,7 @@
             class="about-awards-img"
             data-aos="zoom-out"
             data-aos-duration="1500"
-            src="../assets/images/awards/awards1.png"
+            src="@/assets/images/awards/awards1.png"
             alt="Award One"
           />
         </div>
@@ -20,7 +20,7 @@
             class="about-awards-img"
             data-aos="zoom-out"
             data-aos-duration="1500"
-            src="../assets/images/awards/awards2.png"
+            src="@/assets/images/awards/awards2.png"
             alt="Award Two"
           />
         </div>
@@ -29,7 +29,7 @@
             class="about-awards-img"
             data-aos="zoom-out"
             data-aos-duration="1500"
-            src="../assets/images/awards/awards3.png"
+            src="@/assets/images/awards/awards3.png"
             alt="Award Three"
           />
         </div>
@@ -71,7 +71,7 @@
         <img
           data-aos="zoom-out"
           data-aos-duration="1500"
-          src="../assets/images/jemina-m.png"
+          src="@/assets/images/jemina-m.png"
           alt="Jeminia M. Sy"
         />
         <div class="au-cb-details">
@@ -157,7 +157,7 @@
             class="mvv-section-holder"
             style="border-right: 0.2vh solid #04a533"
           >
-            <img src="../assets/images/icons/flag.png" alt="Mission" />
+            <img src="@/assets/images/icons/flag.png" alt="Mission" />
             <h3>Mission</h3>
             <p>
               Our mission statement is simplicity itself. To constantly exceed customer
@@ -174,7 +174,7 @@
             class="mvv-section-holder"
             style="border-right: 0.2vh solid #04a533"
           >
-            <img src="../assets/images/icons/people.png" alt="Mission" />
+            <img src="@/assets/images/icons/people.png" alt="Mission" />
             <h3>Vision</h3>
             <p>
               To be the leader, the strongest and most trusted company both nationally and
@@ -184,7 +184,7 @@
         </div>
         <div class="pages-col-4">
           <div data-aos="fade-down" data-aos-duration="1500" class="mvv-section-holder">
-            <img src="../assets/images/icons/hands.png" alt="Mission" />
+            <img src="@/assets/images/icons/hands.png" alt="Mission" />
             <h3>Values</h3>
             <p>Connected</p>
             <p>Committed</p>
@@ -205,15 +205,15 @@
       <div class="wcu-content-holder">
         <div class="pages-row">
           <div class="pages-col-4" data-aos="fade-up" data-aos-duration="1500">
-            <img src="../assets/images/icons/award.png" alt="Profesional" />
+            <img src="@/assets/images/icons/award.png" alt="Profesional" />
             <p>PROFESSIONAL QUALITY GUARANTEE</p>
           </div>
           <div class="pages-col-4" data-aos="fade-up" data-aos-duration="1500">
-            <img src="../assets/images/icons/taskl.png" alt="Affordable" />
+            <img src="@/assets/images/icons/taskl.png" alt="Affordable" />
             <p>EASY AND AFFORDABLE PAYMENTS</p>
           </div>
           <div class="pages-col-4" data-aos="fade-up" data-aos-duration="1500">
-            <img src="../assets/images/icons/star.png" alt="Profesional" />
+            <img src="@/assets/images/icons/star.png" alt="Profesional" />
             <p>BEST PRODUCT GUARANTEE</p>
           </div>
         </div>
@@ -223,10 +223,10 @@
   <Footer />
 </template>
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import PageBanner from "../components/PageBanner.vue";
-import AboutBanner from "../assets/images/banners/about-us-banner.png";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+import PageBanner from "@/components/PageBanner.vue";
+import AboutBanner from "@/assets/images/banners/about-us-banner.png";
 
 export default {
   components: {
@@ -250,6 +250,6 @@ export default {
 }
 
 .section-w-background-container {
-  background-image: url(../assets/images/mvv-bg.png);
+  background-image: url(@/assets/images/mvv-bg.png);
 }
 </style>

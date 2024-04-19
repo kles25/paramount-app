@@ -6,7 +6,7 @@
 import { RouterView } from "vue-router";
 </script>
 <script>
-import PricingServicesNavigation from "../../../components/PricingServicesNavigation.vue";
+import PricingServicesNavigation from "@/components/PricingServicesNavigation.vue";
 export default {
   components: {
     PricingServicesNavigation,

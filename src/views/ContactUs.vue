@@ -11,14 +11,14 @@
       <div class="pages-row">
         <div class="pages-col-6">
           <div class="contact-section-holder">
-            <img src="../assets/images/icons/globe.png" alt="" />
+            <img src="@/assets/images/icons/globe.png" alt="" />
             <p>
               For your corporate or personal requirements, whether by sea, air, or land,
               we will provide the most amazing shipping rates and services to you.
             </p>
           </div>
           <div class="contact-section-holder">
-            <img src="../assets/images/icons/call.png" alt="" />
+            <img src="@/assets/images/icons/call.png" alt="" />
             <h3>24/7 SHIPPING SERVICE.</h3>
             <p>+63 906-584-3215 (GLOBE)</p>
             <p>+63 968-597-3038 (SMART)</p>
@@ -53,8 +53,8 @@
   <Footer />
 </template>
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
@@ -65,6 +65,6 @@ export default {
 </script>
 <style scoped>
 .pages-banner-container {
-  background-image: url(../assets/images/banners/contact-us-banner.jpg);
+  background-image: url(@/assets/images/banners/contact-us-banner.jpg);
 }
 </style>

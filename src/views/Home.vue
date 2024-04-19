@@ -77,7 +77,7 @@
             class="col-6-img"
             data-aos="fade-right"
             data-aos-duration="1500"
-            src="../assets/images/service-process.png"
+            src="@/assets/images/service-process.png"
             alt=""
           />
         </div>
@@ -112,14 +112,14 @@
       <div class="pages-row">
         <div class="pages-col-6">
           <div data-aos="fade-up" data-aos-duration="1500" class="contact-section-holder">
-            <img src="../assets/images/icons/globe.png" alt="" />
+            <img src="@/assets/images/icons/globe.png" alt="" />
             <p class="sub-title">
               For your corporate or personal requirements, whether by sea, air, or land,
               we will provide the most amazing shipping rates and services to you.
             </p>
           </div>
           <div class="contact-section-holder" data-aos="fade-up" data-aos-duration="1500">
-            <img src="../assets/images/icons/call.png" alt="" />
+            <img src="@/assets/images/icons/call.png" alt="" />
             <h3>24/7 SHIPPING SERVICE.</h3>
             <p>+63 906-584-3215 (GLOBE)</p>
             <p>+63 968-597-3038 (SMART)</p>
@@ -155,7 +155,7 @@
           <img
             data-aos="fade-up"
             data-aos-duration="1500"
-            src="../assets/images/partners/1.png"
+            src="@/assets/images/partners/1.png"
             alt="Lazada"
           />
         </div>
@@ -163,7 +163,7 @@
           <img
             data-aos="fade-up"
             data-aos-duration="1500"
-            src="../assets/images/partners/2.png"
+            src="@/assets/images/partners/2.png"
             alt="iBayad"
           />
         </div>
@@ -171,7 +171,7 @@
           <img
             data-aos="fade-up"
             data-aos-duration="1500"
-            src="../assets/images/partners/3.png"
+            src="@/assets/images/partners/3.png"
             alt="Forex"
           />
         </div>
@@ -179,7 +179,7 @@
           <img
             data-aos="fade-up"
             data-aos-duration="1500"
-            src="../assets/images/partners/4.png"
+            src="@/assets/images/partners/4.png"
             alt="GDL"
           />
         </div>
@@ -187,7 +187,7 @@
           <img
             data-aos="fade-up"
             data-aos-duration="1500"
-            src="../assets/images/partners/5.png"
+            src="@/assets/images/partners/5.png"
             alt="McRitz"
           />
         </div>
@@ -201,14 +201,14 @@ import { RouterLink } from "vue-router";
 </script>
 
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import warehouseIcon from "../assets/images/icons/warehouse.png";
-import airseaIcon from "../assets/images/icons/air-sea.png";
-import customclearanceIcon from "../assets/images/icons/custom-clearance.png";
-import forwardingIcon from "../assets/images/icons/forwarding.png";
-import truckingIcon from "../assets/images/icons/trucking.png";
-import consolidationIcon from "../assets/images/icons/consolidation.png";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+import warehouseIcon from "@/assets/images/icons/warehouse.png";
+import airseaIcon from "@/assets/images/icons/air-sea.png";
+import customclearanceIcon from "@/assets/images/icons/custom-clearance.png";
+import forwardingIcon from "@/assets/images/icons/forwarding.png";
+import truckingIcon from "@/assets/images/icons/trucking.png";
+import consolidationIcon from "@/assets/images/icons/consolidation.png";
 
 export default {
   components: {

@@ -55,8 +55,8 @@
   <Footer />
 </template>
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
@@ -70,7 +70,7 @@ import { RouterLink } from "vue-router";
 
 <style scoped>
 .pages-banner-container {
-  background-image: url(../assets/images/banners/payment-banner.jpg);
+  background-image: url(@/assets/images/banners/payment-banner.jpg);
 }
 
 .payment-notice-holder {

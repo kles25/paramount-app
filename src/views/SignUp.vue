@@ -17,7 +17,7 @@
           </form>
         </div>
         <div class="pages-col-6">
-          <img src="../assets/images/banners/auth-banner.jpg" alt="" />
+          <img src="@/assets/images/banners/auth-banner.jpg" alt="" />
         </div>
       </div>
     </div>

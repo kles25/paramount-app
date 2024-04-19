@@ -62,7 +62,7 @@ const services = [
 </script>
 
 <script>
-import ServicesNavigation from "../../../components/ServicesNavigation.vue";
+import ServicesNavigation from "@/components/ServicesNavigation.vue";
 export default {
   components: {
     ServicesNavigation,

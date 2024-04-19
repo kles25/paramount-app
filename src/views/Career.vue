@@ -16,7 +16,7 @@
       </p>
       <img
         style="height: 100vh; padding: 5vh 0"
-        src="../assets/images/we-are-hiring.png"
+        src="@/assets/images/we-are-hiring.png"
         alt="We Are Hiring"
       />
       <h4 style="font-size: 3vh; color: #04a533; font-weight: 600">How to Apply:</h4>
@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
@@ -46,6 +46,6 @@ export default {
 </script>
 <style scoped>
 .pages-banner-container {
-  background-image: url(../assets/images/banners/career-banner.png);
+  background-image: url(@/assets/images/banners/career-banner.png);
 }
 </style>

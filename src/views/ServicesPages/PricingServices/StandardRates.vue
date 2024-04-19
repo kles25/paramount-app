@@ -54,7 +54,7 @@
     <div class="services-section-holder">
       <img
         class="img-rates-data"
-        src="../assets/images/srf-local.png"
+        src="@/assets/images/srf-local.png"
         style="width: 50vw; height: auto"
         alt=""
       />

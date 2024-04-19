@@ -239,10 +239,10 @@
   <Footer />
 </template>
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
-import BookService from "../components/BookService.vue";
+import BookService from "@/components/BookService.vue";
 
 export default {
   components: {
@@ -254,6 +254,6 @@ export default {
 </script>
 <style scoped>
 .pages-banner-container {
-  background-image: url(../assets/images/banners/services2-banner.png);
+  background-image: url(@/assets/images/banners/services2-banner.png);
 }
 </style>
