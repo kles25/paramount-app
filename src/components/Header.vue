@@ -316,12 +316,5 @@ const handleClick = () => {
   .menu-holder.active {
     width: 200px;
   }
-
-  .menu-holder {
-    right: 3.5vw;
-  }
-  .hb-icon-holder {
-    right: 3.5vw;
-  }
 }
 </style>

@@ -10,7 +10,7 @@
         </p>
         <div class="hero-button-holder">
           <router-link to="/about-us"><button>About Us</button></router-link>
-          <router-link to="services/pricing/get-quotation"
+          <router-link to="/services/pricing-services-pages/get-quotation"
             ><button>Request Quotation</button></router-link
           >
         </div>
@@ -41,6 +41,7 @@
               <img :src="service.icon" alt="" />
               <h4>{{ service.title }}</h4>
               <p>{{ service.description }}</p>
+              <button>View Details</button>
             </div>
           </router-link>
         </div>
@@ -223,7 +224,7 @@ const services = [
     icon: airseaIcon,
     description:
       "Paramount Logistics offers fast, reliable and low cost air & sea freight solutions assuring your delicate cargo are delivered risk-free and on time benefiting your business the best way possible.",
-    route: "/",
+    route: "/services/main-services-pages/freight-forwarding",
     animationDuration: 500,
   },
   {
@@ -231,7 +232,7 @@ const services = [
     icon: customclearanceIcon,
     description:
       "Whether you choose to use our in-house or outsourced clearing services, we try our best to provide you with the fastest and most reliable service at the most convenient rates.",
-    route: "/",
+    route: "/services/main-services-pages/custom-clearance",
     animationDuration: 800,
   },
   {
@@ -239,7 +240,7 @@ const services = [
     icon: forwardingIcon,
     description:
       "As a company specialized in freight forwarding, we always make sure that the coordination and operation in the whole supply chain is taking our full focus and ran up to the highest standards.",
-    route: "/",
+    route: "/services/main-services-pages/freight-forwarding",
     animationDuration: 1100,
   },
   {
@@ -247,7 +248,7 @@ const services = [
     icon: truckingIcon,
     description:
       "Operating a wide range of different sized fleet of trucks, low bed trailers, heavy loaders and inter modal carriage, we are always a phone call away in order to make sure your cargo is delivered as needed.",
-    route: "/",
+    route: "/services/main-services-pages/trucking",
     animationDuration: 500,
   },
   {
@@ -255,7 +256,7 @@ const services = [
     icon: warehouseIcon,
     description:
       "Whatever your market sector, in today’s highly competitive environment, efficient warehousing and distribution management is central to commercial success.",
-    route: "/",
+    route: "/services/main-services-pages/warehousing",
     animationDuration: 800,
   },
   {
@@ -263,7 +264,7 @@ const services = [
     icon: consolidationIcon,
     description:
       "We have numerous partners abroad and offices in China to do consolidation for your LCL cargoes, which can provide fast and reliable shipping.",
-    route: "/",
+    route: "/services/main-services-pages/consolidation/#main-service-nav",
     animationDuration: 1100,
   },
 ];
