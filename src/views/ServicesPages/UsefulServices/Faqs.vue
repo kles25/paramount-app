@@ -4,11 +4,16 @@
       <div class="accordion">
         <div v-for="(item, index) in items" :key="index">
           <div class="accordion-item" :class="{ active: activeIndex === index }">
-            <div class="accordion-title" @click="toggleAccordion(index)">
+            <div
+              class="accordion-title"
+              @click="toggleAccordion(index)"
+              data-aos="fade-up"
+              :data-aos-duration="item.aDuration"
+            >
               {{ item.title }}
             </div>
-            <div class="accordion-content" v-show="activeIndex === index">
-              {{ item.content }}
+            <div class="accordion-content" :class="{ visible: activeIndex === index }">
+              <p>{{ item.content }}</p>
             </div>
           </div>
         </div>
@@ -42,44 +47,50 @@
 <script setup>
 import { ref } from "vue";
 
-const items = [
-  {
-    title: "What are your services?",
-    content:
-      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
-  },
-  {
-    title: "How much is the rate?",
-    content:
-      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
-  },
-  {
-    title: "How many days until it will arrive?",
-    content:
-      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
-  },
-  {
-    title: "What’s the process?",
-    content:
-      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
-  },
-  {
-    title: "What are prohibited items?",
-    content:
-      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
-  },
-  {
-    title: "What are Regulated items?",
-    content:
-      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
-  },
-];
-
 const activeIndex = ref(null);
 
 const toggleAccordion = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index;
 };
+
+const items = [
+  {
+    title: "What are your services?",
+    aDuration: 500,
+    content:
+      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
+  },
+  {
+    title: "How much is the rate?",
+    aDuration: 800,
+    content:
+      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
+  },
+  {
+    title: "How many days until it will arrive?",
+    aDuration: 1100,
+    content:
+      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
+  },
+  {
+    title: "What’s the process?",
+    aDuration: 1400,
+    content:
+      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
+  },
+  {
+    title: "What are prohibited items?",
+    aDuration: 1700,
+    content:
+      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
+  },
+  {
+    title: "What are Regulated items?",
+    aDuration: 2100,
+    content:
+      "We provide all your needs from shipping abroad up to delivery to your local destination. Our services include sourcing, buying, quality control, consolidating, shipping, and delivery to your doorstep.",
+  },
+];
 
 const data = [
   [
@@ -203,33 +214,29 @@ const data = [
 }
 
 .accordion-content {
-  min-height: 5vh;
+  height: 0vh;
+  width: 100%;
   background-color: #d1f0da;
-  padding: 2vh 2vw;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion-content p {
   font-size: 1.8vh;
   color: #212121;
-  display: none;
+  transition: 0.5s;
+  position: absolute;
+  top: -7vh;
+  margin: 0 2vw;
 }
 
-.accordion-item.active .accordion-content {
-  display: block;
+.accordion-content.visible {
+  height: 10vh;
+  font-size: 1.8vh;
 }
 
-.grid-item {
-  height: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.1vh solid #fffffe;
-}
-
-.grid-item-1 {
-  background-color: #d1f0da;
-}
-.grid-item-2 {
-  background-color: #fffffe;
-}
-.grid-item-3 {
-  background-color: #d1f0da;
+.accordion-content.visible p {
+  top: 2vh;
 }
 </style>

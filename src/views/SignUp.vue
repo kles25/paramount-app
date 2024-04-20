@@ -28,7 +28,7 @@ import { RouterLink } from "vue-router";
 </script>
 <style>
 .auth-section-container {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #fffffe;
   padding: 10vh 5vw;
 }

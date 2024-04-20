@@ -224,7 +224,7 @@ const services = [
     icon: airseaIcon,
     description:
       "Paramount Logistics offers fast, reliable and low cost air & sea freight solutions assuring your delicate cargo are delivered risk-free and on time benefiting your business the best way possible.",
-    route: "/services/main-services-pages/freight-forwarding",
+    route: "/services/main-services-pages/shipping-services",
     animationDuration: 500,
   },
   {
@@ -264,7 +264,7 @@ const services = [
     icon: consolidationIcon,
     description:
       "We have numerous partners abroad and offices in China to do consolidation for your LCL cargoes, which can provide fast and reliable shipping.",
-    route: "/services/main-services-pages/consolidation/#main-service-nav",
+    route: "/services/main-services-pages/consolidation",
     animationDuration: 1100,
   },
 ];

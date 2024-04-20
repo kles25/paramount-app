@@ -1,16 +1,18 @@
 <template>
   <div class="services-section-container">
-    <form class="services-form-holder">
+    <form class="services-form-holder" data-aos="zoom-out" data-aos-duration="1500">
       <div class="forms-title">
         <span class="ft-margin"></span>
         <h5>Cost Calculator by Sea</h5>
       </div>
-      <h1>RATES ARE ONLY ESTIMATE AND WILL BE SUBJECT TO VALUATION AND OTHER CHARGES</h1>
-      <p>
+      <h1 data-aos="fade-down" data-aos-duration="1500">
+        RATES ARE ONLY ESTIMATE AND WILL BE SUBJECT TO VALUATION AND OTHER CHARGES
+      </h1>
+      <p data-aos="fade-up" data-aos-duration="1500">
         (Note: This computation is applicable only for general cargoes (LCL & personal
         effects/e-commerce by air within Metro Manila delivery.)
       </p>
-      <div class="form-select-holder">
+      <div class="form-select-holder" data-aos="fade-up" data-aos-duration="1500">
         <label for="">Select</label>
         <select>
           <option value="" selected disabled>By Air (LCL & personal effects)</option>
@@ -30,7 +32,7 @@
           <option value="5">Five</option>
         </select>
       </div>
-      <div class="form-input-holder">
+      <div class="form-input-holder" data-aos="fade-up" data-aos-duration="1500">
         <input type="text" placeholder="Origin City" />
         <input type="text" placeholder="Destination City" />
         <input type="text" placeholder="CBM" />
@@ -38,7 +40,9 @@
         <input type="number" placeholder="Estimated Price" />
       </div>
       <div class="form-button-holder">
-        <button type="submit">GET QUOTE</button>
+        <button type="submit" data-aos="zoom-in" data-aos-duration="1500">
+          GET QUOTE
+        </button>
       </div>
     </form>
   </div>

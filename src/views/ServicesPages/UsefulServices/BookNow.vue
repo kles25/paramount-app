@@ -1,23 +1,23 @@
 <template>
-  <div class="services-section-container">
+  <div class="section-one-container">
     <form action="" class="services-form-holder">
-      <div class="forms-title">
+      <div class="forms-title" data-aos="zoom-out" data-aos-duration="1500">
         <span class="ft-margin"></span>
         <h5>SENDING OPTION</h5>
       </div>
-      <div class="form-radio-holder">
+      <div class="form-radio-holder" data-aos="fade-up" data-aos-duration="1500">
         <label><input type="radio" name="sending" />Branch Drop Off</label>
         <label><input type="radio" name="sending" />Rider Pick Up</label>
       </div>
-      <div class="forms-title">
+      <div class="forms-title" data-aos="zoom-out" data-aos-duration="1500">
         <span class="ft-margin"></span>
         <h5>RECEIVING OPTION</h5>
       </div>
-      <div class="form-radio-holder">
+      <div class="form-radio-holder" data-aos="fade-up" data-aos-duration="1500">
         <label><input type="radio" name="receiving" />Branch Drop Off</label>
         <label><input type="radio" name="receiving" />Home Delivery</label>
       </div>
-      <div class="form-input-holder">
+      <div class="form-input-holder" data-aos="fade-up" data-aos-duration="1500">
         <input type="text" placeholder="Item Name" />
         <input type="text" placeholder="Item Value" />
         <input type="date" placeholder="Item Name" />
@@ -32,11 +32,11 @@
           placeholder="Enter Receivers Address and Details"
         ></textarea>
       </div>
-      <div class="forms-title">
+      <div class="forms-title" data-aos="zoom-out" data-aos-duration="1500">
         <span class="ft-margin"></span>
         <h5>RECEPTACLE</h5>
       </div>
-      <div class="form-radio-holder-two">
+      <div class="form-radio-holder-two" data-aos="fade-up" data-aos-duration="1500">
         <label for=""
           ><input type="radio" name="receptacle" id="" />1KG N-Pack Small ( 14' x
           9.5")</label
@@ -54,19 +54,19 @@
           x 7")</label
         >
       </div>
-      <div class="forms-title">
+      <div class="forms-title" data-aos="zoom-out" data-aos-duration="1500">
         <span class="ft-margin"></span>
         <h5>MODE OF PAYMENT</h5>
       </div>
-      <div class="form-radio-holder">
+      <div class="form-radio-holder" data-aos="fade-up" data-aos-duration="1500">
         <label><input type="radio" name="receiving" />Branch Drop Off</label>
         <label><input type="radio" name="receiving" />Home Delivery</label>
       </div>
-      <div class="forms-title">
+      <div class="forms-title" data-aos="zoom-out" data-aos-duration="1500">
         <span class="ft-margin"></span>
         <h5>TERMS AND CONDITION</h5>
       </div>
-      <div class="form-radio-holder">
+      <div class="form-radio-holder" data-aos="fade-up" data-aos-duration="1500">
         <label
           ><input type="radio" name="termsconditions" />I have read, understood and agree
           to Paramount &nbsp
@@ -75,7 +75,7 @@
           ></label
         >
       </div>
-      <div class="recaptcha-holder">
+      <div class="recaptcha-holder" data-aos="zoom-in" data-aos-duration="1500">
         <label for="check">
           <div class="input-container">
             <input type="checkbox" class="checkbox" id="check" />
@@ -84,7 +84,7 @@
         </label>
         <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" />
       </div>
-      <div class="form-button-holder">
+      <div class="form-button-holder" data-aos="zoom-in" data-aos-duration="1500">
         <button type="submit">SECHEDULE</button>
       </div>
     </form>
@@ -93,4 +93,3 @@
 <script setup>
 import { RouterLink } from "vue-router";
 </script>
-<style lang=""></style>

@@ -1,10 +1,12 @@
 <template>
-  <div class="services-section-container">
-    <div class="services-section-holder">
-      <h1>STANDARD RATES FOR CONSOLIDATED SHIPMENTS</h1>
-      <div class="title-underline"></div>
+  <div class="section-one-container">
+    <div class="section-one-holder">
+      <h1 data-aos="fade-down" data-aos-duration="1500">
+        STANDARD RATES FOR CONSOLIDATED SHIPMENTS
+      </h1>
+      <div class="title-underline" data-aos="zoom-out" data-aos-duration="1500"></div>
     </div>
-    <div class="services-section-holder">
+    <div class="section-one-holder">
       <div class="pages-row">
         <div
           class="pages-col-4"
@@ -16,12 +18,14 @@
             :key="index"
             :class="['grid-item', `grid-item-${(index % 3) + 1}`]"
             :style="{ backgroundColor: item.color }"
+            data-aos="fade-up"
+            data-aos-duration="1500"
           >
             {{ item.text }}
           </div>
         </div>
       </div>
-      <p style="margin-top: 5vh">
+      <p style="margin-top: 5vh" data-aos="fade-up" data-aos-duration="1500">
         Note: These are standard rates for consolidated shipments involving e-commerce or
         personal effects only. This is an all in package rate from origin up to final
         destination with no extra charge, provided shipper/consignee comply with all the
@@ -29,11 +33,15 @@
         apply for deliveries outside Metro Manila.
       </p>
     </div>
-    <div class="services-section-holder">
-      <h1>STANDARD RATES FOR LOCAL PARCEL DELIVERY</h1>
-      <div class="title-underline"></div>
+  </div>
+  <div class="section-one-container">
+    <div class="section-one-holder">
+      <h1 data-aos="fade-down" data-aos-duration="1500">
+        STANDARD RATES FOR LOCAL PARCEL DELIVERY
+      </h1>
+      <div class="title-underline" data-aos="zoom-out" data-aos-duration="1500"></div>
     </div>
-    <div class="services-section-holder" style="display: none">
+    <div class="section-one-holder" style="display: none">
       <div class="pages-row">
         <div
           class="pages-col-2"
@@ -51,8 +59,10 @@
         </div>
       </div>
     </div>
-    <div class="services-section-holder">
+    <div class="section-one-holder">
       <img
+        data-aos="zoom-out"
+        data-aos-duration="1500"
         class="img-rates-data"
         src="@/assets/images/srf-local.png"
         style="width: 50vw; height: auto"
