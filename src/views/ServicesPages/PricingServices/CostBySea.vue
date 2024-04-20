@@ -1,6 +1,12 @@
 <template>
   <div class="services-section-container">
-    <form class="services-form-holder" data-aos="zoom-out" data-aos-duration="1500">
+    <form
+      ref="form"
+      @submit.prevent="submitForm"
+      class="services-form-holder"
+      data-aos="zoom-out"
+      data-aos-duration="1500"
+    >
       <div class="forms-title">
         <span class="ft-margin"></span>
         <h5>Cost Calculator by Sea</h5>
@@ -48,6 +54,44 @@
   </div>
 </template>
 <script>
-export default {};
+import { ref } from "vue";
+import { useToast } from "vue-toastification";
+
+export default {
+  setup() {
+    const form = ref(null);
+
+    const submitForm = () => {
+      if (!validateForm()) {
+        showToast("Please fill out all fields", "error");
+        return;
+      }
+
+      // Proceed with form submission
+      showToast("Form submitted successfully", "success");
+      resetForm();
+    };
+
+    const validateForm = () => {
+      const inputs = form.value.querySelectorAll("input, select");
+      for (const input of inputs) {
+        if (!input.value) {
+          return false; // Return false if any field is empty
+        }
+      }
+      return true; // Return true if all fields are filled out
+    };
+
+    const showToast = (message, type) => {
+      const toast = useToast();
+      toast[type](message);
+    };
+
+    const resetForm = () => {
+      form.value.reset();
+    };
+
+    return { form, submitForm };
+  },
+};
 </script>
-<style lang=""></style>

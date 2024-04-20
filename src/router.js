@@ -5,7 +5,7 @@ import LoadingScreen from '@/components/LoadingScreen.vue'
 
 const routes = [
     {
-        path: '', component: LoadingScreen, children: [
+        path: '', children: [
             { path: '', redirect: { name: 'home' } },
             { path: '/home', name: 'home', component: () => import('./views/Home.vue') },
             { path: '/about-us', name: 'about-us', component: () => import('./views/AboutUs.vue') },

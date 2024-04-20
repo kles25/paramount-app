@@ -6,27 +6,34 @@
       <div class="pages-row">
         <div class="pages-col-6">
           <form
-            action=""
+            @submit.prevent="submitForm"
             class="form-book-holder"
             data-aos="zoom-in"
             data-aos-duration="1500"
           >
-            <input type="text" placeholder="NAME" />
-            <input type="email" placeholder="EMAIL" />
-            <input type="number" placeholder="PHONE" />
-            <div class="book-button-holder"><button type="submit">BOOK</button></div>
+            <input type="text" placeholder="NAME" v-model="formData.name" />
+            <input type="email" placeholder="EMAIL" v-model="formData.email" />
+            <input
+              type="text"
+              placeholder="PHONE"
+              v-model="formData.phone"
+              @input="formatPhoneNumber"
+            />
+            <div class="book-button-holder">
+              <button type="submit">BOOK</button>
+            </div>
           </form>
         </div>
         <div class="pages-col-6">
           <div class="contact-book-holder" data-aos="fade-up" data-aos-duration="1500">
-            <img src="@/assets/images/paramount-logo.png" alt="" />
+            <BsGlobe2 />
             <p>
               For your corporate or personal requirements, whether by sea, air, or land,
               we will provide the most amazing shipping rates and services to you.
             </p>
           </div>
           <div class="contact-book-holder" data-aos="fade-up" data-aos-duration="1500">
-            <img src="@/assets/images/paramount-logo.png" alt="" />
+            <BxPhoneCall />
             <h3>24/7 SHIPPING SERVICE.</h3>
             <p>+63 906-584-3215 (GLOBE)</p>
             <p>+63 968-597-3038 (SMART)</p>
@@ -36,8 +43,84 @@
     </div>
   </div>
 </template>
-<script></script>
+
+<script setup>
+import { BsGlobe2, BxPhoneCall } from "@kalimahapps/vue-icons";
+</script>
+<script>
+import { useToast } from "vue-toastification";
+
+export default {
+  data() {
+    return {
+      formData: {
+        name: "",
+        email: "",
+        phone: "",
+      },
+    };
+  },
+  methods: {
+    submitForm() {
+      if (!this.validateForm()) {
+        return;
+      }
+
+      // Form submission logic goes here
+
+      this.showToast("Form submitted successfully", "success");
+      this.resetForm();
+    },
+    validateForm() {
+      const { name, email, phone } = this.formData;
+
+      if (!name || name.length < 6) {
+        this.showToast("Name must be at least 6 characters long", "error");
+        return false;
+      }
+
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        this.showToast("Please enter a valid email address", "error");
+        return false;
+      }
+
+      if (!/^09\d{9}$/.test(phone)) {
+        this.showToast("Phone number must start with 09 and be 11 digits long", "error");
+        return false;
+      }
+
+      return true;
+    },
+    formatPhoneNumber(event) {
+      // Prevent leading zeros from being removed
+      if (event.target.value.startsWith("0")) {
+        event.target.value = "0" + event.target.value.slice(1).replace(/\D/g, "");
+      } else {
+        event.target.value = event.target.value.replace(/\D/g, "");
+      }
+    },
+    showToast(message, type) {
+      const toast = useToast();
+      toast[type](message);
+    },
+    resetForm() {
+      this.formData = {
+        name: "",
+        email: "",
+        phone: "",
+      };
+    },
+  },
+};
+</script>
 <style>
+.contact-book-holder svg {
+  font-size: 5vh;
+  color: #04a533;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+}
+
 @media (max-width: 992px) {
   .book-service-holder .pages-col-6 {
     -webkit-box-flex: 0;
